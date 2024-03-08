@@ -39,10 +39,10 @@ def bdel_class_and_copy_folder(source_folder, destination_folder, del_class_list
 
 if __name__ == "__main__":
     source_folder = 'final_yolo_dataset'
-    del_classes = [16, 17, 21, 24, 25, 26, 27, 29, 31, 32, 7, 20, 28]  # 지울 클래스 번호    
+    del_classes = [16, 17, 21, 24, 25, 26, 27, 29, 31, 32, 7, 20, 28]  #  
     destination_folder = f'Dataset_bind_{"_".join(map(str, del_classes))}_deleted' 
-    class_change = {'8':'14', '15':'14', '19':'18', '4':'3', '9' : '12'} # 딕셔너리 class : NewClass
+    class_change = {'8':'14', '15':'14', '19':'18', '4':'3', '9' : '12'} # Original class : New class
     bdel_class_and_copy_folder(source_folder, destination_folder, del_class_list=del_classes, class_change_map=class_change)
-    # 데이터 폴더 생성되면 폴더 루트에 yaml 파일만 넣어주시오!(yaml file 맨 윗줄 path만 수정해서)
+    # Once you have created the data folder, put only the yaml file in the root of the folder! (Modify only the path at the top of the yaml file)
     
     

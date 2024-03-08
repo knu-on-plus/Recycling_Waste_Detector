@@ -30,7 +30,7 @@ def yolo_valid(model_path):
     return [f1_score, map, map50], matrix
 
 
-# Plot custom confusion matrix after feature engineering(del or bine classes)
+# Plot custom confusion matrix after class modification(del or bine classes)
 def plot_norm_conf_matrix(matrix, 
                           del_class, 
                           save_dir = "norm_conf_matrix",

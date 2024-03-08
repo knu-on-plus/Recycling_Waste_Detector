@@ -26,9 +26,9 @@ def del_class_and_copy_folder(source_folder, destination_folder, del_class_list)
 
 
 if __name__ == "__main__":
-    source_folder = 'Dataset_bind_16_17_21_24_25_26_27_29_31_32_deleted' # 지울 대상 데이터셋/ 원본 : final_yolo_dataset
-    del_classes = [7,20,28]  # 지울 클래스 번호    
+    source_folder = 'Dataset_bind_16_17_21_24_25_26_27_29_31_32_deleted' # dataset path
+    del_classes = [7,20,28]  # the class num to be deleted   
     destination_folder = f'Dataset_{"_".join(map(str, del_classes))}_deleted' 
 
     del_class_and_copy_folder(source_folder, destination_folder, del_class_list=del_classes)
-    # 데이터 폴더 생성되면 폴더 루트에 yaml 파일만 넣어주시오!(yaml file 맨 윗줄 path만 수정해서)
+    # Once you have created the data folder, put only the yaml file in the root of the folder! (Modify only the path at the top of the yaml file)
