@@ -1,4 +1,4 @@
 __pycache__/
 dataset_legacy/
-model.legacy
+model_legacy/
 wim_labels.py
