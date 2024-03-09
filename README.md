@@ -48,7 +48,7 @@ Worked by [Minse Ha](https://github.com/haminse)
 <img width="540" alt="image" src="https://github.com/knu-on-plus/Trash_Detector/assets/68217111/54ca3395-dd88-4d8f-89d7-3c1f36a22fc1">
 
 
-### 3. Model Trainining
+### 3. Model Training
 - Trained Yolov8 detection model pretrained by COCO dataset
 - Conducted to train various size of yolo modes
 - Visualized the confusion matrix & F1score
