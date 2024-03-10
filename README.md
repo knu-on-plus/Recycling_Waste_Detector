@@ -12,6 +12,8 @@ Worked by [Minse Ha](https://github.com/haminse)
 
 - Implement trash detector with recycling waste data from vison AI & Robotics company [WIM](https://www.wimcorp.co.kr/)
 
+<img width="1038" alt="image" src="https://github.com/knu-on-plus/Recycling_Waste_Detector/assets/68217111/7688e1bb-bdb0-491c-95c1-ba7acc28d19c">
+
 
 ### Object information
 
@@ -39,10 +41,20 @@ Worked by [Minse Ha](https://github.com/haminse)
 
 - Augmentation parameters in yolov8
 
-| Params   | values   | Functions | Reasons |
-| ---------| ---------| ----------| --------|
-| Cell 1   | Cell 2   |           |         |
-| Cell 3   | Cell 4   |           |         |
+| params     | value | Functions                      | Reasons                           |
+|------------|-------|--------------------------------|-----------------------------------|
+| epochs     | 100   | Number of epochs               | Baseline comparison               |
+| patience   | 5 or 10 | Early stopping threshold     | Prevent overfitting, stop if no improvement after 5 or 10 epochs |
+| shear      | 0.2   | Image shearing                 | Augment dataset with sheared images |
+| degrees    | 0.3   | Image rotation                 | Augment dataset with rotated images |
+| copy_paste | 0.5   | Randomly segment objects and insert them into other images | Helps model generalize better by creating composite images |
+| flipud     | 0.5   | Vertical flipping              | Augment dataset with vertically flipped images |
+| fliplr     | 0.5   | Horizontal flipping            | Augment dataset with horizontally flipped images |
+| translate  | 0.2   | Image shifting                 | Augment dataset with shifted images |
+| batch      | 64    | Batch size for image processing | Efficient use of memory, GPU acceleration, balance between speed and memory usage |
+| hsv_v      | 0.6   | Brightness adjustment          | Augment dataset with brightness-varied images |
+| hsv_s      | 0.9   | Saturation adjustment          | Augment dataset with saturation-varied images |
+
 
 - Augmentation Results : Reduces overfitting and improves generalization performance
 <img width="540" alt="image" src="https://github.com/knu-on-plus/Trash_Detector/assets/68217111/54ca3395-dd88-4d8f-89d7-3c1f36a22fc1">
@@ -58,7 +70,11 @@ Worked by [Minse Ha](https://github.com/haminse)
 
 ### 4. Final Result
 
-| Model   | F1score   | mAP | mAP50 |
-| ---------| ---------| ----------| --------|
-| Cell 1   | Cell 2   |           |         |
-| Cell 3   | Cell 4   |           |         |
+| Model    | F1 score | mAp     | mAp50   |
+|----------|----------|---------|---------|
+| YOLOv8l  | 0.546260 | 0.417540| 0.603613|
+| YOLOv8m  | 0.594815 | 0.438444| 0.617753|
+| YOLOv8n  | 0.568087 | 0.342928| 0.533377|
+| YOLOv8s  | 0.515948 | 0.376841| 0.528821|
+| **YOLOv8x**  | **0.637628** | **0.458198**| **0.620616**|
+
