@@ -2,6 +2,8 @@
 ---
 Worked by [Minse Ha](https://github.com/haminse)
 
+Check the full project in [Here](https://github.com/knu-on-plus/Data-generation-solution-for-recycling-waste-classification)
+
 ### Problem & Solution
 
 - Sorting recycling waste requires a lot of manpower and time.
